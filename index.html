@@ -1,146 +1,183 @@
 <!doctype html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Green Coffee Bean – WhatsApp Order</title>
-  <meta name="description" content="Swanson Full Spectrum Green Coffee Bean 400 mg – Order on WhatsApp." />
+  <title>قهوة خضراء من سوانسون – اطلب عبر واتساب</title>
+  <meta name="description" content="إعلان عربي لمنتج سوانسون القهوة الخضراء 400 مجم. تواصل واطلب مباشرة عبر واتساب." />
   <style>
-    :root {
-      --bg: #0b0f0c;
-      --fg: #ffffff;
-      --accent: #25d366;
-      --muted: #e8f5ed;
+    :root{
+      --bg1:#0e0f2e;
+      --bg2:#0a3d2a;
+      --bg3:#7a1fa2;
+      --fg:#ffffff;
+      --accent:#25d366; /* WhatsApp */
+      --chip:#ffe082;
     }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color: var(--fg);
-      background: radial-gradient(1200px 600px at 70% -10%, #14321e 0%, var(--bg) 50%) fixed;
-      min-height: 100svh;
-      display: grid;
-      place-items: center;
-      padding: 24px;
-    }
-    .card {
-      width: min(980px, 100%);
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 24px;
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    }
-    .media {
-      background: #0e1a12;
-      display: grid;
-      place-items: center;
-      padding: clamp(16px, 3vw, 32px);
-    }
-    .media img {
-      width: 100%;
-      height: auto;
-      max-width: 520px;
-      filter: drop-shadow(0 10px 24px rgba(0,0,0,0.45));
-      border-radius: 12px;
-      background: #0e1a12;
-    }
-    .content {
-      padding: clamp(20px, 4vw, 40px);
-      display: grid;
-      gap: 16px;
-      align-content: center;
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: "Tajawal", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      color:var(--fg);
+      min-height:100svh;
       background:
-        radial-gradient(400px 200px at 30% -10%, #1f5a33 0%, transparent 70%),
-        linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0));
+        radial-gradient(1200px 600px at 100% -10%, rgba(122,31,162,.45), transparent 60%),
+        radial-gradient(900px 500px at 0% 110%, rgba(10,61,42,.60), transparent 60%),
+        linear-gradient(135deg, var(--bg1), var(--bg2));
+      display:grid;
+      place-items:center;
+      padding:24px;
     }
-    .eyebrow {
-      display: inline-block;
-      padding: 6px 10px;
-      border: 1px solid rgba(255,255,255,0.25);
-      border-radius: 999px;
-      font-size: 12px;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      color: var(--muted);
+    .sparkle{
+      position: fixed;
+      inset:0;
+      pointer-events:none;
+      background:
+        radial-gradient(4px 4px at 20% 30%, rgba(255,255,255,.35), transparent 60%),
+        radial-gradient(3px 3px at 80% 20%, rgba(255,255,255,.25), transparent 60%),
+        radial-gradient(2px 2px at 60% 80%, rgba(255,255,255,.25), transparent 60%);
+      filter: blur(.4px);
+      opacity:.6;
     }
-    h1 {
-      margin: 0;
-      font-size: clamp(28px, 4vw, 40px);
-      line-height: 1.1;
+    .card{
+      width:min(1020px,100%);
+      border-radius:28px;
+      overflow:hidden;
+      backdrop-filter: blur(8px);
+      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.02));
+      border:1px solid rgba(255,255,255,.18);
+      box-shadow: 0 18px 40px rgba(0,0,0,.35);
+      display:grid;
+      grid-template-columns: 1.05fr .95fr;
     }
-    .bullets {
-      margin: 6px 0 0;
-      padding: 0 0 0 18px;
-      color: #e6f2ea;
-      font-size: clamp(14px, 2vw, 16px);
+    .media{
+      background: linear-gradient(160deg, rgba(122,31,162,.25), rgba(37,211,102,.12));
+      display:grid;
+      place-items:center;
+      padding:clamp(16px,3vw,38px);
     }
-    .cta {
-      margin-top: 10px;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 14px 18px;
-      font-weight: 700;
-      text-decoration: none;
-      color: #062a11;
-      background: var(--accent);
-      border-radius: 14px;
-      box-shadow: 0 8px 18px rgba(37,211,102,0.35), inset 0 -3px 0 rgba(0,0,0,0.15);
-      transition: transform .08s ease, box-shadow .2s ease;
+    .media img{
+      width:100%;
+      max-width:560px;
+      height:auto;
+      border-radius:16px;
+      background:#0b261a;
+      filter: drop-shadow(0 14px 28px rgba(0,0,0,.45));
     }
-    .cta:hover { transform: translateY(-1px); }
-    .cta:active { transform: translateY(0); box-shadow: 0 4px 10px rgba(37,211,102,0.25); }
-    .cta small { opacity: .8; font-weight: 600; }
-    .price-tag {
-      display: inline-block;
-      margin-top: 6px;
-      padding: 6px 10px;
-      background: rgba(255,255,255,0.08);
-      border: 1px dashed rgba(255,255,255,0.25);
-      border-radius: 10px;
-      font-size: 13px;
+    .content{
+      padding:clamp(20px,4vw,44px);
+      display:grid;
+      gap:14px;
+      align-content:center;
+      position:relative;
+      background:
+        radial-gradient(500px 220px at 30% -10%, rgba(255,224,130,.25), transparent 70%),
+        radial-gradient(380px 180px at 90% 120%, rgba(37,211,102,.16), transparent 70%);
     }
-    footer {
-      margin-top: 14px;
-      font-size: 12px;
-      color: #cfe7da;
-      opacity: .9;
+    .eyebrow{
+      display:inline-block;
+      padding:6px 12px;
+      font-size:12px;
+      letter-spacing:.05em;
+      border:1px solid rgba(255,255,255,.35);
+      border-radius:999px;
+      background:rgba(255,255,255,.06);
     }
-    @media (max-width: 880px) {
-      .card { grid-template-columns: 1fr; }
-      .media { order: -1; }
+    h1{
+      margin:0;
+      font-size:clamp(26px,4vw,40px);
+      line-height:1.15;
+    }
+    .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:2px}
+    .chip{
+      background:var(--chip);
+      color:#3a2a00;
+      padding:6px 10px;
+      border-radius:999px;
+      font-size:13px;
+      border:1px solid rgba(0,0,0,.08);
+    }
+    .section{margin-top:4px}
+    .section h3{margin:.6rem 0 .3rem 0;font-size:18px}
+    ul{margin:.2rem 0 .6rem 0;padding-inline-start:18px}
+    li{margin:.2rem 0}
+    .cta{
+      margin-top:8px;
+      display:inline-flex;align-items:center;gap:10px;
+      padding:14px 18px;
+      font-weight:800;text-decoration:none;
+      color:#083218;background:var(--accent);
+      border-radius:14px;
+      box-shadow:0 10px 22px rgba(37,211,102,.35), inset 0 -3px 0 rgba(0,0,0,.18);
+      transition:transform .08s ease, box-shadow .2s ease;
+    }
+    .cta:hover{transform:translateY(-1px)}
+    .cta:active{transform:translateY(0)}
+    .note{
+      font-size:12px;opacity:.9;color:#e9ffef;
+    }
+    .footer{
+      margin-top:8px;font-size:12px;color:#e6f7ef;opacity:.9
+    }
+    @media (max-width:920px){
+      .card{grid-template-columns:1fr}
+      .media{order:-1}
     }
   </style>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <main class="card">
+  <div class="sparkle" aria-hidden="true"></div>
+  <main class="card" role="main">
     <section class="content">
-      <span class="eyebrow">Swanson • 400 mg</span>
-      <h1>Full Spectrum® Green Coffee Bean</h1>
-      <ul class="bullets">
-        <li>60 capsules • dietary supplement</li>
-        <li>Designed for weight management</li>
-        <li>Original product – ready to ship</li>
-      </ul>
+      <span class="eyebrow">سوانسون • 400 مجم</span>
+      <h1>القهوة الخضراء <span style="opacity:.9">Full Spectrum®</span></h1>
 
-      <a class="cta" href="https://wa.me/966534002330" target="_blank" rel="noopener">
-        Chat on WhatsApp
-        <small>(+966 53 400 2330)</small>
+      <div class="chips">
+        <div class="chip">60 كبسولة</div>
+        <div class="chip">مكمل غذائي</div>
+        <div class="chip">مناسب لأسلوب حياة نشط</div>
+        <div class="chip">صنع في الولايات المتحدة</div>
+      </div>
+
+      <div class="section">
+        <h3>الفوائد المتوقعة</h3>
+        <ul>
+          <li>دعم التحكم في الوزن مع نظام غذائي ونشاط بدني مناسبين.</li>
+          <li>يحتوي على حمض الكلوروجينيك الطبيعي الموجود في حبوب البن غير المحمصة.</li>
+          <li>صيغة جرعة يومية ميسورة وسهلة الاستخدام.</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h3>طريقة الاستخدام المقترحة</h3>
+        <ul>
+          <li>كبسولة واحدة مرتين يومياً مع الماء، ويفضل قبل الوجبات.</li>
+          <li>لا تتجاوز الجرعة الموصى بها.</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h3>المكونات الرئيسية</h3>
+        <ul>
+          <li>مستخلص القهوة الخضراء (Green Coffee Bean) 400 مجم لكل كبسولة.</li>
+          <li>مكونات غير فعّالة شائعة للكبسولات النباتية.</li>
+        </ul>
+      </div>
+
+      <a class="cta" href="https://wa.me/966534002330" target="_blank" rel="noopener" aria-label="تواصل عبر واتساب">
+        اطلب الآن عبر واتساب
+        <small style="font-weight:700;opacity:.85">(+966 53 400 2330)</small>
       </a>
 
-      <div class="price-tag">اطلب عرض اليوم عبر الواتساب</div>
-
-      <footer>لطلب المنتج تواصل معنا عبر <b>واتساب</b> مباشرة.</footer>
+      <p class="note">تنبيه: هذا المنتج مكمل غذائي وليس دواءً. لا يُستخدم من قبل الحوامل أو المرضعات أو من هم دون 18 سنة. إذا كنت تتناول أدوية أو لديك حالة صحية، استشر الطبيب قبل الاستخدام.</p>
+      <div class="footer">لطلب المنتج أو الاستفسار السريع اضغط زر <b>واتساب</b> بالأعلى.</div>
     </section>
 
-    <section class="media" aria-label="Product image">
-      <img src="61OmBSCnuqL.jpg_BO30,255,255,255_UF900,850_SR1910,1000,0,C_QL100_.jpg" alt="Swanson Green Coffee Bean 400 mg – 60 capsules" />
+    <section class="media" aria-label="صورة المنتج">
+      <img src="61OmBSCnuqL.jpg_BO30,255,255,255_UF900,850_SR1910,1000,0,C_QL100_.jpg" alt="سوانسون القهوة الخضراء 400 مجم – 60 كبسولة" />
     </section>
   </main>
-
 </body>
 </html>
