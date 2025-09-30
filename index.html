@@ -4,191 +4,134 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>عرض القهوة الخضراء – اطلب الآن عبر واتساب</title>
-  <meta name="description" content="إعلان جذاب ثابت لمنتج سوانسون القهوة الخضراء 400 مجم بسعر 129 بدل 229 وزر واتساب فقط." />
+  <meta name="description" content="إعلان عربي ثابت لمنتج سوانسون القهوة الخضراء 400 مجم بسعر 129 بدل 229، صورة شفافة مكبرة 2× في أعلى الصفحة وزر واتساب فقط." />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --bg1:#0a1437;
-      --bg2:#0b4d32;
-      --bg3:#7a1fa2;
-      --fg:#ffffff;
-      --accent:#25d366;
-      --gold:#ffd54f;
-      --muted:#e8f5ed;
-      --card: rgba(255,255,255,.08);
-      --border: rgba(255,255,255,.2);
-    }
+    :root{ --bg1:#0a1437; --bg2:#0b4d32; --fg:#fff; --accent:#25d366; --gold:#ffd54f; --card:rgba(255,255,255,.08); --border:rgba(255,255,255,.2); --hero-max:1080px; }
     *{box-sizing:border-box}
-    body{
-      margin:0; font-family:"Tajawal",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
-      color:var(--fg);
-      min-height:100svh; overflow-x:hidden;
+    body{ margin:0; font-family:"Tajawal",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif; color:var(--fg); min-height:100svh; overflow-x:hidden;
       background:
         radial-gradient(1200px 600px at 120% -10%, rgba(122,31,162,.40), transparent 60%),
         radial-gradient(900px 500px at -10% 120%, rgba(37,211,102,.35), transparent 60%),
-        linear-gradient(135deg, var(--bg1), var(--bg2));
-    }
-    .blob{position:fixed; border-radius:50%; filter:blur(60px); opacity:.3; pointer-events:none}
-    .b1{width:420px; height:420px; background:#7a1fa2; right:-120px; top:-80px; animation:float1 12s ease-in-out infinite alternate}
-    .b2{width:520px; height:520px; background:#25d366; left:-160px; bottom:-160px; animation:float2 14s ease-in-out infinite alternate}
-    @keyframes float1{to{transform:translate(-50px,40px) scale(1.1)}}
-    @keyframes float2{to{transform:translate(40px,-40px) scale(1.05)}}
-
-    .wrap{max-width:1100px; margin:auto; padding:20px}
-    .hero{
-      margin-top:24px;
-      display:grid; gap:20px; grid-template-columns: 1.1fr .9fr;
-      align-items:center;
-    }
-    .card{
-      background:linear-gradient(180deg, var(--card), rgba(255,255,255,.03));
-      border:1px solid var(--border);
-      border-radius:28px; box-shadow:0 18px 40px rgba(0,0,0,.35);
-      padding:clamp(18px,3vw,34px);
-    }
-    .eyebrow{display:inline-flex; gap:8px; align-items:center; font-size:13px; padding:6px 12px; border:1px solid var(--border); border-radius:999px; background:rgba(255,255,255,.06)}
+        linear-gradient(135deg, var(--bg1), var(--bg2)); }
+    .wrap{max-width:1100px;margin:auto;padding:20px}
+    .hero-image{display:grid;place-items:center;margin-top:20px;margin-bottom:6px}
+    .hero-image img{ width:100%; height:auto; max-width:var(--hero-max); filter: drop-shadow(0 18px 34px rgba(0,0,0,.45)); }
+    .card{ background:linear-gradient(180deg, var(--card), rgba(255,255,255,.03)); border:1px solid var(--border); border-radius:28px; box-shadow:0 18px 40px rgba(0,0,0,.35); padding:clamp(18px,3vw,34px); }
+    .eyebrow{display:inline-flex;gap:8px;align-items:center;font-size:13px;padding:6px 12px;border:1px solid var(--border);border-radius:999px;background:rgba(255,255,255,.06)}
     .badge{background:var(--gold); color:#402700; font-weight:800; padding:4px 10px; border-radius:999px}
-    h1{margin:.3rem 0; font-size:clamp(28px,4.5vw,46px); line-height:1.15}
-    .sub{opacity:.92; font-size:clamp(14px,2.2vw,18px)}
-    .stars{display:inline-flex; gap:4px; font-size:18px; color:var(--gold)}
-    .chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px}
+    h1{margin:.3rem 0; font-size:clamp(28px,4.5vw,46px); line-height:1.15; text-align:center}
+    .sub{opacity:.92; font-size:clamp(14px,2.2vw,18px); text-align:center}
+    .chips{display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin-top:10px}
     .chip{background:#e0f7ec; color:#08361a; padding:6px 10px; border-radius:999px; font-size:13px; border:1px solid rgba(0,0,0,.06)}
-
-    .price-row{display:flex; align-items:baseline; gap:12px; margin-top:6px}
-    .price{font-size:36px; font-weight:800}
+    .price-row{display:flex; align-items:baseline; gap:12px; justify-content:center; margin-top:10px}
+    .price{font-size:38px; font-weight:800}
     .strike{opacity:.6; text-decoration:line-through}
     .save{background:#003d22; color:#90ffba; padding:6px 10px; border-radius:10px; font-size:13px; border:1px dashed rgba(144,255,186,.4)}
-
-    .cta{margin-top:14px; display:inline-flex; align-items:center; gap:12px; padding:16px 20px; font-weight:800; text-decoration:none; color:#083218; background:var(--accent); border-radius:16px; box-shadow:0 12px 24px rgba(37,211,102,.35), inset 0 -3px 0 rgba(0,0,0,.18); transition:transform .08s ease}
+    .cta{margin:14px auto 0; display:inline-flex; align-items:center; gap:12px; padding:16px 20px; font-weight:800; text-decoration:none; color:#083218; background:var(--accent); border-radius:16px; box-shadow:0 12px 24px rgba(37,211,102,.35), inset 0 -3px 0 rgba(0,0,0,.18); transition:transform .08s ease}
     .cta:hover{transform:translateY(-1px)}
     .cta .pulse{width:10px; height:10px; background:#0d8a43; border-radius:50%; position:relative}
     .cta .pulse::after{content:""; position:absolute; inset:-8px; border-radius:50%; border:2px solid rgba(13,138,67,.6); animation:pulse 1.2s infinite ease-out}
     @keyframes pulse{to{transform:scale(1.5); opacity:0}}
-
-    .hero-media{display:grid; place-items:center}
-    .hero-media img{width:100%; max-width:540px; height:auto; border-radius:18px; background:#0b261a; filter: drop-shadow(0 18px 34px rgba(0,0,0,.45))}
-
     .grid{display:grid; gap:18px; grid-template-columns: repeat(3,1fr); margin-top:18px}
     .tile{padding:16px; border-radius:18px; background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); border:1px solid var(--border)}
     .tile h3{margin:.1rem 0 .4rem 0; font-size:18px}
     ul{margin:.2rem 0 .6rem 0; padding-inline-start:18px}
     li{margin:.2rem 0}
-
     .accordion{margin-top:16px}
     .q{cursor:pointer; padding:14px 16px; border-radius:14px; border:1px solid var(--border); background:rgba(255,255,255,.05); margin-top:10px; position:relative}
     .q b{pointer-events:none}
     .a{max-height:0; overflow:hidden; transition:max-height .25s ease; padding:0 16px}
     .q.open + .a{max-height:300px; padding:10px 16px 14px}
-
-    .seal-row{display:flex; gap:10px; flex-wrap:wrap; margin-top:10px}
+    .seal-row{display:flex; gap:10px; flex-wrap:wrap; justify-content:center; margin-top:10px}
     .seal{display:inline-flex; align-items:center; gap:8px; padding:8px 10px; border-radius:999px; border:1px solid var(--border); background:rgba(255,255,255,.06); font-size:13px}
-
-    .floating{
-      position:fixed; bottom:16px; left:16px; right:16px; display:flex; justify-content:center; z-index:30;
-    }
-    .floating a{padding:14px 18px; border-radius:999px; font-weight:800; text-decoration:none; color:#083218; background:var(--accent); box-shadow:0 10px 22px rgba(37,211,102,.35)}
-    .hide-on-wide{display:none}
-
-    footer{margin:28px 0 10px; opacity:.8; font-size:12px}
-
-    @media (max-width:980px){
-      .hero{grid-template-columns:1fr}
-      .hide-on-wide{display:block}
-    }
+    footer{margin:26px 0 10px; opacity:.8; font-size:12px; text-align:center}
+    @media (max-width:980px){ .grid{grid-template-columns:1fr} }
   </style>
 </head>
 <body>
-  <div class="blob b1"></div>
-  <div class="blob b2"></div>
-
   <div class="wrap">
-    <section class="hero">
-      <div class="card">
-        <span class="eyebrow"><span class="badge">عرض ثابت</span> سوانسون • 400 مجم</span>
-        <h1>القهوة الخضراء <span style="opacity:.9">Full Spectrum®</span></h1>
-        <div class="stars" aria-label="تقييم 4.8 من 5">★ ★ ★ ★ ★</div>
-        <p class="sub">مكمل غذائي يدعم التحكم في الوزن مع أسلوب حياة صحي. جودة موثوقة من سوانسون – 60 كبسولة.</p>
-
-        <div class="chips">
-          <div class="chip">حمض الكلوروجينيك الطبيعي</div>
-          <div class="chip">خالي من المنكهات الصناعية</div>
-          <div class="chip">صنع في الولايات المتحدة</div>
-          <div class="chip">مناسب للنباتيين</div>
-        </div>
-
-        <div class="price-row">
-          <div class="price">129 ر.س</div>
-          <div class="strike">229 ر.س</div>
-          <div class="save">وفّر الآن مع العرض</div>
-        </div>
-
-        <a class="cta" href="https://wa.me/966534002330" target="_blank" rel="noopener" aria-label="اطلب عبر واتساب">
-          <span class="pulse" aria-hidden="true"></span>
-          اطلب الآن عبر واتساب
-          <small style="font-weight:700;opacity:.9">(+966 53 400 2330)</small>
-        </a>
-
-        <div class="seal-row">
-          <div class="seal">🚚 شحن سريع</div>
-          <div class="seal">✅ منتج أصلي 100%</div>
-          <div class="seal">🔒 دفع آمن عند الاستلام</div>
-          <div class="seal">📦 إرجاع خلال 7 أيام</div>
-        </div>
-      </div>
-
-      <div class="hero-media">
-        <img src="61OmBSCnuqL.jpg_BO30,255,255,255_UF900,850_SR1910,1000,0,C_QL100_.jpg" alt="سوانسون القهوة الخضراء 400 مجم – 60 كبسولة">
-      </div>
+    <section class="hero-image" aria-label="صورة المنتج">
+      <img src="Green_coffee.png" alt="سوانسون القهوة الخضراء 400 مجم – صورة المنتج بخلفية شفافة (مكبرة 2×)">
     </section>
 
-    <section class="grid">
-      <div class="tile">
-        <h3>لماذا القهوة الخضراء؟</h3>
-        <ul>
-          <li>تساعد في إدارة الشهية عند استخدامها مع نظام متوازن.</li>
-          <li>مستخلص الحبوب غير المحمصة غني بمركبات طبيعية مفيدة.</li>
-          <li>كبسولات سهلة البلع وروتين بسيط.</li>
-        </ul>
+    <section class="card">
+      <div style="text-align:center;margin-bottom:8px">
+        <span class="eyebrow"><span class="badge">أفضل سعر اليوم</span> سوانسون • 400 مجم</span>
       </div>
-      <div class="tile">
-        <h3>طريقة الاستخدام</h3>
-        <ul>
-          <li>كبسولة واحدة مرتين يومياً مع الماء.</li>
-          <li>يفضل قبل الوجبات الرئيسية.</li>
-          <li>لا تتجاوز الجرعة الموصى بها.</li>
-        </ul>
+      <h1>القهوة الخضراء <span style="opacity:.9">Full Spectrum®</span></h1>
+      <p class="sub">مكمل غذائي يدعم التحكم في الوزن مع أسلوب حياة صحي. جودة موثوقة من سوانسون – 60 كبسولة.</p>
+
+      <div class="chips">
+        <div class="chip">حمض الكلوروجينيك الطبيعي</div>
+        <div class="chip">صنع في الولايات المتحدة</div>
+        <div class="chip">خالي من المنكهات الصناعية</div>
+        <div class="chip">مناسب للنباتيين</div>
       </div>
-      <div class="tile">
-        <h3>معلومات سريعة</h3>
-        <ul>
-          <li>الكمية: 60 كبسولة.</li>
-          <li>المنشأ: الولايات المتحدة الأمريكية.</li>
-          <li>الفئة: مكمل غذائي.</li>
-        </ul>
+
+      <div class="price-row">
+        <div class="price">129 ر.س</div>
+        <div class="strike">229 ر.س</div>
+        <div class="save">وفّر 100 ر.س</div>
       </div>
-    </section>
 
-    <section class="accordion" aria-label="الأسئلة الشائعة">
-      <div class="q" tabindex="0"><b>هل يناسب الجميع؟</b></div>
-      <div class="a"><p>لا يُستخدم لمن هم دون 18 سنة أو الحوامل/المرضعات. استشر الطبيب إذا لديك حالة صحية أو تتناول أدوية.</p></div>
+      <a class="cta" href="https://wa.me/966534002330" target="_blank" rel="noopener" aria-label="اطلب عبر واتساب">
+        <span class="pulse" aria-hidden="true"></span>
+        اطلب الآن عبر واتساب
+        <small style="font-weight:700;opacity:.9">(+966 53 400 2330)</small>
+      </a>
 
-      <div class="q" tabindex="0"><b>متى تظهر النتائج؟</b></div>
-      <div class="a"><p>تختلف من شخص لآخر. الاتساق مع نظام غذائي ونشاط بدني هو العامل الأهم.</p></div>
+      <div class="seal-row">
+        <div class="seal">🚚 شحن سريع</div>
+        <div class="seal">✅ منتج أصلي 100%</div>
+        <div class="seal">🔒 دفع آمن عند الاستلام</div>
+        <div class="seal">📦 إرجاع خلال 7 أيام</div>
+      </div>
 
-      <div class="q" tabindex="0"><b>هل هو بديل للغذاء أو الدواء؟</b></div>
-      <div class="a"><p>هو مكمل غذائي وليس دواءً ولا يُعد بديلاً عن الوجبات.</p></div>
+      <section class="grid" aria-label="معلومات إضافية">
+        <div class="tile">
+          <h3>لماذا القهوة الخضراء؟</h3>
+          <ul>
+            <li>تساعد في إدارة الشهية مع نظام غذائي متوازن.</li>
+            <li>مستخلص الحبوب غير المحمصة غني بالمركبات الطبيعية.</li>
+            <li>كبسولات سهلة وروتين بسيط.</li>
+          </ul>
+        </div>
+        <div class="tile">
+          <h3>طريقة الاستخدام</h3>
+          <ul>
+            <li>كبسولة واحدة مرتين يومياً مع الماء.</li>
+            <li>يفضل قبل الوجبات الرئيسية.</li>
+            <li>لا تتجاوز الجرعة الموصى بها.</li>
+          </ul>
+        </div>
+        <div class="tile">
+          <h3>معلومات سريعة</h3>
+          <ul>
+            <li>الكمية: 60 كبسولة.</li>
+            <li>المنشأ: الولايات المتحدة الأمريكية.</li>
+            <li>الفئة: مكمل غذائي.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="accordion" aria-label="الأسئلة الشائعة">
+        <div class="q" tabindex="0"><b>هل يناسب الجميع؟</b></div>
+        <div class="a"><p>لا يُستخدم لمن هم دون 18 سنة أو الحوامل/المرضعات. استشر الطبيب إذا لديك حالة صحية أو تتناول أدوية.</p></div>
+
+        <div class="q" tabindex="0"><b>متى تظهر النتائج؟</b></div>
+        <div class="a"><p>تختلف من شخص لآخر. الاتساق مع نظام غذائي ونشاط بدني هو العامل الأهم.</p></div>
+
+        <div class="q" tabindex="0"><b>هل هو بديل للغذاء أو الدواء؟</b></div>
+        <div class="a"><p>هو مكمل غذائي وليس دواءً ولا يُعد بديلاً عن الوجبات.</p></div>
+      </section>
     </section>
 
     <footer>تنبيه: المكمّلات الغذائية لا تُشخّص أو تعالج أو تمنع الأمراض. للاستخدام المسؤول فقط.</footer>
   </div>
 
-  <div class="floating hide-on-wide">
-    <a href="https://wa.me/966534002330" target="_blank" rel="noopener" aria-label="تواصل عبر واتساب">اطلب عبر واتساب الآن</a>
-  </div>
-
   <script>
-    // accordion
     document.querySelectorAll('.q').forEach((q)=>{
       q.addEventListener('click', ()=> q.classList.toggle('open'));
       q.addEventListener('keydown', (e)=>{ if(e.key==='Enter' || e.key===' ') { e.preventDefault(); q.click(); }});
